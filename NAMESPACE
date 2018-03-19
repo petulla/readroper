@@ -1,3 +1,4 @@
-exportPattern(read_rpr)
+export(readroper_example)
+export(read_rpr)
 
 
