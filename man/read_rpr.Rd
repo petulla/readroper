@@ -4,7 +4,21 @@
 \alias{read_rpr}
 \title{Reads Roper Center datasets}
 \usage{
-read_rpr(col_positions, widths, col_names, filepath, card_read, cards)
+read_rpr(col_positions = NaN, widths = NaN, col_names = NaN,
+  filepath = NaN, card_read = NaN, cards = NaN)
+}
+\arguments{
+\item{col_positions}{starting position(s) to read}
+
+\item{widths}{width of value(s) to read}
+
+\item{col_names}{names of columns to return}
+
+\item{filepath}{data obj or filepath to read}
+
+\item{card_read}{card to read (if blank, reads a single card dataset)}
+
+\item{cards}{number of cards in dataset (if null, assumes single card)}
 }
 \value{
 a dataframe with \code{len(col_names)} number of columns, assigned to the values of \code{col_names}
@@ -14,15 +28,18 @@ Reads fixed-width ASCII roper files.
 Takes arguments in the format a Roper Center survey codebook provides
 }
 \examples{
-fwf_sample <- readr_example('testMultiCard.txt')
-cat(read_lines(fwf_sample))
-fwf_sample2 <- readr_example('testSingleCard.txt')
-cat(read_lines(fwf_sample2))
+fwf_sample <- readroper_example('testMultiCard.txt')
+cat(readr::read_lines(fwf_sample))
+fwf_sample2 <- readroper_example('testSingleCard.txt')
+cat(readr::read_lines(fwf_sample2))
 # 1. Fixed width file, first card, multi-card
-read_rpr(c(1,2,4), c(1,2,1), c('V1','V2','V3'), fwf_sample, 1, 2)
+read_rpr(col_positions=c(1,2,4), widths=c(1,2,1),
+col_names=c('V1','V2','V3'), filepath=fwf_sample, card_read=1, cards=2)
 # 2 .Fixed width file, first card, single card
-read_rpr(c(1,2,4), c(1,2,1), c('V1','V2','V3'), fwf_sample2)
-# 3. Fixed width file, second card, multi-card
-read_rpr(c(2,1,4), c(2,1,1), c('V2','V1','V3'), fwf_sample, 2, 2)
+read_rpr(col_positions=c(1,2,4), widths=c(1,2,1),
+col_names=c('V1','V2','V3'), filepath=fwf_sample2)
+ # 3. Fixed width file, second card, multi-card
+read_rpr(col_positions=c(1,2,4), widths=c(1,2,1),
+col_names=c('V1','V2','V3'), filepath=fwf_sample, card_read=2, cards=2)
 
 }

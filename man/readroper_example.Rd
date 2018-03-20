@@ -15,5 +15,6 @@ directory. This function make them easy to access
 }
 \examples{
 readroper_example()
-readroper_example('processData.R')
+readroper_example('testMultiCard.txt')
+readroper_example('testSingleCard.txt')
 }
