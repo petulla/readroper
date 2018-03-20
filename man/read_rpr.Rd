@@ -2,7 +2,7 @@
 % Please edit documentation in R/readroper.R
 \name{read_rpr}
 \alias{read_rpr}
-\title{Takes arguments in the format a Roper Center survey codebook provides}
+\title{Reads Roper Center datasets}
 \usage{
 read_rpr(col_positions, widths, col_names, filepath, card_read, cards)
 }
@@ -10,16 +10,19 @@ read_rpr(col_positions, widths, col_names, filepath, card_read, cards)
 a dataframe with \code{len(col_names)} number of columns, assigned to the values of \code{col_names}
 }
 \description{
+Reads fixed-width ASCII roper files.
 Takes arguments in the format a Roper Center survey codebook provides
 }
 \examples{
-fwf_sample <- readr_example("fwf-sample.txt")
+fwf_sample <- readr_example('testMultiCard.txt')
 cat(read_lines(fwf_sample))
+fwf_sample2 <- readr_example('testSingleCard.txt')
+cat(read_lines(fwf_sample2))
 # 1. Fixed width file, first card, multi-card
-read_rpr(c('1','2','4'), c('1','2','1'), c('V1','V2','V3'), fwf_sample, 1, 2)
+read_rpr(c(1,2,4), c(1,2,1), c('V1','V2','V3'), fwf_sample, 1, 2)
 # 2 .Fixed width file, first card, single card
-read_rpr(c('1','2','4'), c('1','2','1'), c('V1','V2','V3'), fwf_sample)
+read_rpr(c(1,2,4), c(1,2,1), c('V1','V2','V3'), fwf_sample2)
 # 3. Fixed width file, second card, multi-card
-read_rpr(c('2','1','4'), c('2','1','1'), c('V2','V1','V3'), fwf_sample, 2, 2)
+read_rpr(c(2,1,4), c(2,1,1), c('V2','V1','V3'), fwf_sample, 2, 2)
 
 }

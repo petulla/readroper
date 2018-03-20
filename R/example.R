@@ -7,7 +7,8 @@
 #' @export
 #' @examples
 #' readroper_example()
-#' readroper_example('processData.R')
+#' readroper_example('testMultiCard.txt')
+#' readroper_example('testSingleCard.txt')
 readroper_example <- function(path = NULL) {
     if (is.null(path)) {
         dir(system.file("extdata", package = "readroper"))

@@ -5,13 +5,14 @@ Version: 0.1.0
 Authors@R: person("Sam", "Petulla", email = "sam.petulla@gmail.com",
                   role = c("aut", "cre"))
 Description: Reads in Roper Center fixed-width data files
-License: MIT
+License: MIT license
 Encoding: UTF-8
 LazyData: true
 Imports:
   readr (>= 1.1)
 Suggests: knitr,
     rmarkdown,
-    testthat
+    testthat,
+    gdata
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
