@@ -1,0 +1,29 @@
+---
+title: "Reading single and multicard Roper ASCII polling datasets"
+author: "Sam Petulla"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Reading single and multicard Roper ASCII polling datasets}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This package simplifies the task of reading single and multicard datasets into R. By default, it loads the fixed-width ASCII files into R as dataframes.
+
+The package assumes you have the following, from the polling codebook:
+
+- At least one survey question position
+- The width of the survey question answer in the datafile
+- The card number and the total number of cards in the dataset (or in the case of a single card dataset, no card input is needed)
+
+## Example file read
+
+The 
