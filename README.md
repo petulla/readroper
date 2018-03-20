@@ -14,7 +14,7 @@ Soon, you can install the released version of readroper from [CRAN](https://CRAN
 install.packages("readroper")
 ```
 
-(Not yet..). Until then, the development version from [GitHub](https://github.com/) with:
+Until then, the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
