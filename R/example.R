@@ -7,11 +7,11 @@
 #' @export
 #' @examples
 #' readroper_example()
-#' readroper_example("processData.R")
+#' readroper_example('processData.R')
 readroper_example <- function(path = NULL) {
-  if (is.null(path)) {
-    dir(system.file("extdata", package = "readroper"))
-  } else {
-    system.file("extdata", path, package = "readroper", mustWork = TRUE)
-  }
+    if (is.null(path)) {
+        dir(system.file("extdata", package = "readroper"))
+    } else {
+        system.file("extdata", path, package = "readroper", mustWork = TRUE)
+    }
 }
