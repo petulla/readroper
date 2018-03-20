@@ -1,12 +1,22 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-readroper
-=========
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# readroper
 
 Use this package to read ASCII fixed-width data files from the Roper Center and other polling providers into R.
 
-Installation
-------------
+## Installation
 
 Soon, you can install the released version of readroper from [CRAN](https://CRAN.R-project.org) with:
 
@@ -20,8 +30,7 @@ install.packages("readroper")
 # install.packages("devtools")
 devtools::install_github("petulla/readroper")
 ```
-
-Usage
------
+## Usage
 
 For instructions on use see the [vignette](https://github.com/petulla/readroper/tree/master/vignettes).
+
