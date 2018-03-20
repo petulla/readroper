@@ -26,47 +26,50 @@ The package assumes you have the following, from the polling codebook:
 - The width of the survey question answer in the datafile
 - The card number and the total number of cards in the dataset (or in the case of a single card dataset, no card input is needed)
 
-## Example file read
+## Example of a file read
 
 A typical single card datafile can be parsed like this:
 
-```
+```{r, eval = FALSE}
   df <- read_rpr(col_positions=c(1,2,4), widths=c(1,2,1),col_names=c('V1','V2','V3'), filepath='data.txt')
 ```
 
  `read_rpr` takes at least four arguments: `col_positions`, `widths`, `col_names`, and `filepath`.
  
-### Arguments to read_rpr
+## Arguments to read_rpr for all datasets
 
-#### col_positions
+### col_positions
 
 `col_positions` is a vector of integers where each unit should correspond to the location of the question you want to retreive. So if you wish to retrieve a question at positions 10 and 18, your vector is: `c(10,18)`.
 
-#### widths
+### widths
 
 `widths` is a vector of integers where each unit should correspond to the width of the question you want to retreive. So if you wish to retrieve two questions of widths 1 and 2, your vector is: `c(1,2)`.
 
-#### col_names
+### col_names
 
 `col_names` is a vector where each unit should correspond to the names you wish to assign to the columns that will be returned for each question you want to retreive. So if you wish to retrieve two questions and name them Q1 and Q13, then your vector is: `c('Q1','Q13')`.
 
-#### filepath
+### filepath
 
 `filepath` needs can be a path to an ascii dataset or a dataset that has been read with read_lines and concatenated like this: `cat(readr::read_lines('filepath.txt'))`
 
-### Arguments to read_rpr for multicard datasets
+
+## Read_rpr for multicard datasets
 
 A multicard dataset with two cards might be read like this: 
 
-```
+```{r, eval = FALSE}
 df <- read_rpr(col_positions=c(1,2,4), widths=c(1,2,1),col_names=c('V1','V2','V3'), filepath='data.txt', card_read=1, cards=2)
 ```
+
 This would read the questions in the first card of the dataset at positions 1, 2 and 4.
 
-#### card_read
+
+### card_read
 
 `card_read` should be the card that you wish to read.
 
-#### cards
+### cards
 
 `cards` should be equal to the total number of cards in the dataset.
