@@ -31,7 +31,10 @@ The package assumes you have the following, from the polling codebook:
 A typical single card datafile can be parsed like this:
 
 ```{r, eval = FALSE}
-  df <- read_rpr(col_positions=c(1,2,4), widths=c(1,2,1),col_names=c('V1','V2','V3'), filepath='data.txt')
+df <- read_rpr(col_positions=c(1,2,4),
+               widths=c(1,2,1),
+               col_names=c('V1','V2','V3'),
+               filepath='data.txt')
 ```
 
  `read_rpr` takes at least four arguments: `col_positions`, `widths`, `col_names`, and `filepath`.
@@ -60,7 +63,12 @@ A typical single card datafile can be parsed like this:
 A multicard dataset with two cards might be read like this: 
 
 ```{r, eval = FALSE}
-df <- read_rpr(col_positions=c(1,2,4), widths=c(1,2,1),col_names=c('V1','V2','V3'), filepath='data.txt', card_read=1, cards=2)
+df <- read_rpr(col_positions=c(1,2,4), 
+               widths=c(1,2,1), 
+               col_names=c('V1','V2','V3'), 
+               filepath='data.txt', 
+               card_read=1, 
+               cards=2)
 ```
 
 This would read the questions in the first card of the dataset at positions 1, 2 and 4.

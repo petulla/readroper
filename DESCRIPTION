@@ -1,11 +1,11 @@
 Package: readroper
 Type: Package
-Title: Readroper
-Version: 0.1.0
+Title: Simply Read ASCII Single and Multicard Polling Datasets
+Version: 0.9.0
 Authors@R: person("Sam", "Petulla", email = "sam.petulla@gmail.com",
                   role = c("aut", "cre"))
-Description: Reads in Roper Center fixed-width data files
-License: MIT license
+Description: A convenient way to read fixed-width ASCII polling datasets from provides like the Roper Center.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
