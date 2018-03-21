@@ -13,6 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 # readroper
+[![Build Status](https://travis-ci.org/petulla/readroper.svg?branch=master)](https://travis-ci.org/petulla/readroper)
 
 Use this package to read ASCII fixed-width data files from the Roper Center and other polling providers into R.
 
