@@ -4,7 +4,7 @@ Title: Simply Read ASCII Single and Multicard Polling Datasets
 Version: 0.9.0
 Authors@R: person("Sam", "Petulla", email = "sam.petulla@gmail.com",
                   role = c("aut", "cre"))
-Description: A convenient way to read fixed-width ASCII polling datasets from provides like the Roper Center.
+Description: A convenient way to read fixed-width ASCII polling datasets from providers like the Roper Center<https://ropercenter.cornell.edu>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
