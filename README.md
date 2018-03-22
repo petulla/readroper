@@ -26,7 +26,7 @@ devtools::install_github("petulla/readroper")
 Usage
 -----
 
-To read a multicard ASCII file and weights and output a csv file, just do:
+To read three questions from a multicard ASCII polling file and weights and output a csv file, you'll want something like:
 
 ``` r
   weights df <- read_rpr(col_positions=c(1),
@@ -35,7 +35,7 @@ To read a multicard ASCII file and weights and output a csv file, just do:
                filepath='data.txt')
    card2 <- read_rpr(col_positions=c(1,2,4), 
                widths=c(1,2,1), 
-               col_names=c('V1','V2','V3'), 
+               col_names=c('Q1','Q2','Q3'), 
                filepath='data.txt', 
                card_read=1, 
                cards=2)
