@@ -10,13 +10,13 @@ Use this package to read ASCII fixed-width data files from the Roper Center and 
 Installation
 ------------
 
-Soon, you can install the released version of readroper from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of readroper from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("readroper")
 ```
 
-Until then, get the development version from [GitHub](https://github.com/) with:
+The development version from [GitHub](https://github.com/) is installed with:
 
 ``` r
 # install.packages("devtools")
