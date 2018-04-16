@@ -29,7 +29,7 @@ Usage
 To read three questions from a multicard ASCII polling file and weights and output a csv file, you'll want something like:
 
 ``` r
-  weights df <- read_rpr(col_positions=c(1),
+  weightsdf <- read_rpr(col_positions=c(1),
                widths=c(3),
                col_names=c('Weights'),
                filepath='data.txt')
