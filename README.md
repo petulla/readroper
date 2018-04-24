@@ -26,21 +26,20 @@ devtools::install_github("petulla/readroper")
 Usage
 -----
 
-To read three questions from a multicard ASCII polling file and weights and output a csv file, you'll want something like:
+To read weights and three questions from card 1 from a multicard ASCII polling file and output a csv file, you'll want something like:
 
 ``` r
   weights <- read_rpr(col_positions=c(1),
                widths=c(3),
                col_names=c('Weights'),
                filepath='data.txt')
-   card2 <- read_rpr(col_positions=c(1,2,4), 
+   card1 <- read_rpr(col_positions=c(1,2,4), 
                widths=c(1,2,1), 
                col_names=c('Q1','Q2','Q3'), 
                filepath='data.txt', 
                card_read=1, 
                cards=2)
-   GALLUP <- cbind(weights,card2)
-   GALLUP$Weights = as.numeric(GALLUP$Weights)/100
+   GALLUP <- cbind(weights,card1)
    write.csv(GALLUP,file='cnngallup.csv', row.names=FALSE)
 ```
 
