@@ -13,8 +13,9 @@ knitr::opts_chunk$set(
 )
 ```
 # readroper
+[![Build Status](https://travis-ci.org/petulla/readroper.svg?branch=master)](https://travis-ci.org/petulla/readroper)
 
-The goal of readroper is to ...
+Use this package to read ASCII fixed-width data files from the Roper Center and other polling providers into R.
 
 ## Installation
 
@@ -24,32 +25,30 @@ You can install the released version of readroper from [CRAN](https://CRAN.R-pro
 install.packages("readroper")
 ```
 
-And the development version from [GitHub](https://github.com/) with:
+The development version from [GitHub](https://github.com/) is installed with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("petulla/readroper")
 ```
-## Example
+## Usage
 
-This is a basic example which shows you how to solve a common problem:
+To read three questions from a multicard ASCII polling file and weights and output a csv file, you'll want something like:
 
-```{r example}
-## basic example code
+```r
+  weights df <- read_rpr(col_positions=c(1),
+               widths=c(3),
+               col_names=c('Weights'),
+               filepath='data.txt')
+   card2 <- read_rpr(col_positions=c(1,2,4), 
+               widths=c(1,2,1), 
+               col_names=c('Q1','Q2','Q3'), 
+               filepath='data.txt', 
+               card_read=1, 
+               cards=2)
+   GALLUP <- cbind(weights,card2)
+   GALLUP$Weights = as.numeric(GALLUP$Weights)/100
+   write.csv(GALLUP,file='cnngallup.csv', row.names=FALSE)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+For instructions on use see the [vignette](https://github.com/petulla/readroper/tree/master/vignettes).
