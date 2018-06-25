@@ -1,7 +1,7 @@
 Package: readroper
 Type: Package
 Title: Simply Read ASCII Single and Multicard Polling Datasets
-Version: 0.9.1
+Version: 0.9.2
 Authors@R: person("Sam", "Petulla", email = "sam.petulla@gmail.com",
                   role = c("aut", "cre"))
 Description: A convenient way to read fixed-width ASCII polling datasets from providers like the Roper Center <https://ropercenter.cornell.edu>.
