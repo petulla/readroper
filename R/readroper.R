@@ -23,9 +23,12 @@
 #' # 2 .Fixed width file, first card, single card
 #' read_rpr(col_positions=c(1,2,4), widths=c(1,2,1),
 #' col_names=c('V1','V2','V3'), filepath=fwf_sample2)
-#'  # 3. Fixed width file, second card, multi-card
+#' # 3. Fixed width file, second card, multi-card
 #' read_rpr(col_positions=c(1,2,4), widths=c(1,2,1),
 #' col_names=c('V1','V2','V3'), filepath=fwf_sample, card_read=2, cards=2)
+#' #4. Fixed width file, multi-card, columns from different cards
+#' read_rpr(col_positions=c(1,2,4), widths=c(1,2,1),
+#' col_names=c('V1','V2','V3'), filepath=fwf_sample, card_read=c(1,2,1), cards=2)
 #'
 read_rpr <- function(col_positions = NaN, widths = NaN, col_names = NaN, filepath = NaN, card_read = 1, cards = 1) {
 
