@@ -4,8 +4,14 @@
 \alias{read_rpr}
 \title{Reads Roper Center datasets}
 \usage{
-read_rpr(col_positions = NaN, widths = NaN, col_names = NaN,
-  filepath = NaN, card_read = NaN, cards = NaN)
+read_rpr(
+  col_positions = NaN,
+  widths = NaN,
+  col_names = NaN,
+  filepath = NaN,
+  card_read = NaN,
+  cards = NaN
+)
 }
 \arguments{
 \item{col_positions}{starting position(s) to read}

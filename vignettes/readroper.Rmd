@@ -43,7 +43,7 @@ df <- read_rpr(col_positions=c(1,2,4),
 
 ### col_positions
 
-`col_positions` is a vector of integers where each unit should correspond to the location of the question you want to retreive. So if you wish to retrieve a question at positions 10 and 18, your vector is: `c(10,18)`.
+`col_positions` is a vector of integers where each unit should correspond to the location of the question you want to retrieve. So if you wish to retrieve a question at positions 10 and 18, your vector is: `c(10,18)`.
 
 ### widths
 
